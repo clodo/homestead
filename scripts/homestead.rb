@@ -161,6 +161,10 @@ class Homestead
         end
 
         if (type == "symfony")
+          type = "symfony"
+        end
+
+        if (type == "symfony2")
           type = "symfony2"
         end
 
