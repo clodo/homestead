@@ -168,6 +168,10 @@ class Homestead
           type = "symfony2"
         end
 
+        if (type == "lamp")
+          type = "lamp"
+        end
+
         config.vm.provision "shell" do |s|
           s.name = "Creating Site: " + site["map"]
           s.path = scriptDir + "/serve-#{type}.sh"
