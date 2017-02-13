@@ -22,6 +22,7 @@ block="server {
     index index.html index.htm index.php;
     charset utf-8;
     location / {
+        rewrite ^/admin.php.*$ /admin.php;
         try_files \$uri \$uri/ /index.php?\$query_string;
     }
     location = /favicon.ico { access_log off; log_not_found off; }
